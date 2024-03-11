@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+  <persistence-unit name="quiz_unit">
+    <description>Unite de persitence pour le systeme quiz</description>
+    <class>org.example.tprestapi.entities.Options</class>
+    <class>org.example.tprestapi.entities.Question</class>
+    <class>org.example.tprestapi.entities.Quiz</class>
+    <class>org.example.tprestapi.entities.QuizQuestion</class>
+    <class>org.example.tprestapi.entities.QuizQuestionPK</class>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    <properties>
+      <property name="hibernate.connection.provider_class" value="com.zaxxer.hikari.hibernate.HikariConnectionProvider"/>
+      <property name="hibernate.hikari.dataSourceClassName" value="com.mysql.cj.jdbc.MysqlDataSource"/>
+      <property name="hibernate.hikari.dataSource.url" value="jdbc:mysql://ggservices.mysql.database.azure.com:3306/script?useSSL=true&amp;requireSSL=false"/>
+      <property name="hibernate.hikari.dataSource.user" value="cgodin5324"/>
+      <property name="hibernate.hikari.dataSource.password" value="web@2024"/>
+      <property name="hibernate.hikari.minimumIdle" value="5"/>
+      <property name="hibernate.hikari.maximumPoolSize" value="10"/>
+      <property name="hibernate.hikari.idleTimeout" value="30000"/>
+      <property name="hibernate.hikari.dataSource.cachePrepStmts" value="true"/>
+      <property name="hibernate.hikari.dataSource.prepStmtCacheSize" value="250"/>
+      <property name="hibernate.hikari.dataSource.prepStmtCacheSqlLimit" value="2048"/>
+      <property name="hibernate.hikari.poolName" value="HibernateHikariCP"/>
+    </properties>
+  </persistence-unit>
+</persistence>
