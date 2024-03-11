@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générer un quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<style>
+       .difficulte-label{
+        color:blue;
+       }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center mb-3">
+            <div class="col-auto">
+                <input type="text" class="form-control" id="quizTitle" placeholder="Enter Quiz Title">
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center mb-3">
+            <div class="col-auto">
+                <label for="nombre-facile" class="form-label">Nombre des questions de type </label>
+            </div>
+            <div class="col-auto">
+                <label for="facile" class="difficulte-label" id="facile">Facile</label>
+            </div>
+            <div class="col-auto">
+                <input type="number" class="form-control" id="number-Facile" placeholder="0">
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center mb-3">
+            <div class="col-auto">
+                <label for="nombre-moyen" class="form-label">Nombre des questions de type </label>
+            </div>
+            <div class="col-auto">
+                <label for="moyen" class="difficulte-label" id="moyen">Moyen</label>
+            </div>
+            <div class="col-auto">
+                <input type="number" class="form-control" id="number-Moyen" placeholder="0">
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center mb-3">
+            <div class="col-auto">
+                <label for="nombre-difficile" class="form-label">Nombre des questions de type </label>
+            </div>
+            <div class="col-auto">
+                <label for="difficile" class="difficulte-label" id="difficile"> Difficile</label>
+            </div>
+            <div class="col-auto">
+                <input type="number" class="form-control" id="number-Difficile" placeholder="0">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <button id="btnSave" type="button" class="btn btn-primary">Générer</button>
+            </div>
+            <div class="col-auto">
+                <button type="button" class="btn btn-secondary" id="btnDelete">Annuler</button>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
